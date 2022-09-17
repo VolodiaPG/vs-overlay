@@ -53,6 +53,7 @@ in
     remap = prev.callPackage ./plugins/remap { };
     removegrain = prev.callPackage ./plugins/removegrain { };
     retinex = prev.callPackage ./plugins/retinex { };
+    vsrife = prev.callPackage ./plugins/vsrife { };
     sangnom = prev.callPackage ./plugins/sangnom { };
     scxvid = prev.callPackage ./plugins/scxvid { };
     subtext = prev.callPackage ./plugins/subtext { };
