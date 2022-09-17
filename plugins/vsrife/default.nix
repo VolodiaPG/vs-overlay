@@ -52,8 +52,8 @@ stdenv.mkDerivation rec {
   # '';
 
   meta = with lib; {
-    homepage = "https://github.com/ExpidusOS/libtokyo";
+    homepage = "";
     license = with licenses; [ gpl3Only ];
-    maintainers = [ "Tristan Ross" ];
+    maintainers = [ "" ];
   };
 }
