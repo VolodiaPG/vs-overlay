@@ -9,6 +9,7 @@ let
     nnedi3cl
     scxvid
     wwxd
+    vsrife
   ];
 in
 buildPythonPackage rec {
