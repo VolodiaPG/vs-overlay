@@ -12,11 +12,11 @@
 , vapoursynth
 }:
 stdenv.mkDerivation rec {
-  name = "vsrife";
-  version = "r9";
+  name = "vapoursynth-vsrife";
+  version = "9";
   src = fetchgit {
     url = "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan";
-    rev = version;
+    rev = "r${version}";
     fetchSubmodules = true;
     sha256 = "sha256-X1c2Eo5QkDELMHo9tP1ue2iZu5qeLatQessfsqmSl60=";
   };
@@ -31,13 +31,13 @@ stdenv.mkDerivation rec {
     cmake
     ninja
     glslang
+  ];
+
+  buildInputs = [
     vulkan-headers
     vulkan-loader
     vulkan-validation-layers
     vapoursynth
-  ];
-
-  buildInputs = [
   ];
 
   enableParallelBuilding = true;
@@ -53,7 +53,8 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     homepage = "";
-    license = with licenses; [ gpl3Only ];
-    maintainers = [ "" ];
+    license = licenses.gpl2;
+    maintainers = [ "volodiapg" ];
+    platforms = platforms.all;
   };
 }
